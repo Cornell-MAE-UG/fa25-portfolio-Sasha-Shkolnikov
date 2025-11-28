@@ -1,16 +1,23 @@
 ---
 layout: project
-title: Analysis of Functions
-description: Class project with Graphs
-technologies: [MATLAB, python]
-image: /assets/images/function-graph.png
+title: 12-2025 MAE 4272 Blade Design Project
+description: Constrained Blade Optimization
+technologies: [MATLAB]
+image: /assets/images/Wind-Turbine-Cover-Photo.jpg
 ---
 
 
-As part of a class project...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+The MAE 4272 Blade Design Project encompassed designing wind turbine blades and testing their power output in a wind tunnel. 
 
+Our group had to determine the operating condtion at which to optimize the blades for: chord, span, and pitch. The design had to be tested within the range of the wind tunnel's torque break, and while ensuring the blade's structural integrity within the range rotation speeds.
 
-Aenean faucibus luctus est, sed bibendum tellus. Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+Design process: Key decisions, iterations, or modeling steps your team performed
+
+Testing summary: How the blades were tested and what data you analyzed
+
+Your contribution: Briefly describe what you worked on
+
+Figures: Plots, CAD image, and photos 
 
 
 This is how I solved the problem:

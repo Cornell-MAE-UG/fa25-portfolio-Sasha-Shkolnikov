@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Sasha Shkolnikov - Curriculum Vitae
 permalink: /cv/
 ---
 ## Curriculum Vitae
