@@ -5,7 +5,8 @@ description: "Constrained Blade Optimization"
 technologies:
   - MATLAB
   - Wind Tunnel
-image: /fa25-portfolio-Sasha-Shkolnikov/assets/images/Wind-Turbine-Cover-Photo.jpg
+image: /assets/images/Wind-Turbine-Cover-Photo.jpg
+
 ---
 
 
