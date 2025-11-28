@@ -57,8 +57,8 @@ Aspiring aerospace engineering student with a strong foundation in aerodynamic t
   
 - **[US Government] - Student Intern**  
 [May, 2025] - [August, 2025]  
-- Employed cutting edge software tools, on-the-job learned tradecraft, critical thinking, and engineering expertise to draft technical snapshots on engineering capabilities  
-- Provided timely and objective analysis to inform US officials on key policy issues through analytic insights in brainstorming sessions, briefings, and written products  
+  - Employed cutting edge software tools, on-the-job learned tradecraft, critical thinking, and engineering expertise to draft technical snapshots on engineering capabilities  
+  - Provided timely and objective analysis to inform US officials on key policy issues through analytic insights in brainstorming sessions, briefings, and written products  
 ---
 
 
