@@ -3,7 +3,7 @@ layout: project
 title: 12-2025 MAE 4272 Blade Design Project
 description: Constrained Blade Optimization
 technologies: [MATLAB]
-image: /assets/images/Wind-Turbine-Cover-Photo.jpg
+image: {{ "/assets/images/Wind-Turbine-Cover-Photo.jpg" | relative_url }}
 ---
 
 
