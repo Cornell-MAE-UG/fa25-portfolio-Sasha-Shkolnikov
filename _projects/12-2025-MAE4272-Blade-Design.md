@@ -1,9 +1,11 @@
 ---
 layout: project
-title: 12-2025 MAE 4272 Blade Design Project
-description: Constrained Blade Optimization
-technologies: [MATLAB]
-image: {{ "/assets/images/Wind-Turbine-Cover-Photo.jpg" | relative_url }}
+title: "12-2025 MAE 4272 Blade Design Project"
+description: "Constrained Blade Optimization"
+technologies:
+  - MATLAB
+  - Wind Tunnel
+image: /fa25-portfolio-Sasha-Shkolnikov/assets/images/Wind-Turbine-Cover-Photo.jpg
 ---
 
 
