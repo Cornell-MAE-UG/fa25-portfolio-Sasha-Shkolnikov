@@ -37,12 +37,12 @@ Aspiring aerospace engineering student with a strong foundation in aerodynamic t
 ---
 
 #### Projects
-- **[Blade Design]**:  
+- **Blade Design**:  
   *[Senior Design and Optimization Project for MAE 4272]*  
   - optimized the design of a wind turbine blade   
   - predicted its performance and structural loading using BEM scripts, and validated the design with wind tunnel testing
 
-- **[737 Max Ethical Analysis]**:  
+- **737 Max Ethical Analysis**:  
   *[Capstone Ethics Project for MAE 4300]*  
   - Key Achievement 1  
   - Key Achievement 2  
@@ -50,15 +50,16 @@ Aspiring aerospace engineering student with a strong foundation in aerodynamic t
 ---
 
 #### Work Experience
-- **[Cornell University] - Undergraduate Teaching Assistant**  
-  [August, 2025] - [December, 2025]  
+- **Cornell University - Undergraduate Teaching Assistant**  
+  August, 2025 - December, 2025 
   - Improving aerospace literacy by leading discussions and offering office hours for 50+ peers  
   - Advising peers on course assignments and technical specifications of a mini-glider project design 
   
-- **[US Government] - Student Intern**  
-[May, 2025] - [August, 2025]  
+- **US Government - Student Intern**  
+  May, 2025 - August, 2025 
   - Employed cutting edge software tools, on-the-job learned tradecraft, critical thinking, and engineering expertise to draft technical snapshots on engineering capabilities  
   - Provided timely and objective analysis to inform US officials on key policy issues through analytic insights in brainstorming sessions, briefings, and written products  
+
 ---
 
 
