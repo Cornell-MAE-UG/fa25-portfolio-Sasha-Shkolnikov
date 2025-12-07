@@ -22,11 +22,13 @@ Our group had to determine the operating condtion at which to optimize the blade
 <img src="{{ '/assets/images/blade-simulation.png' | relative_url }}" alt="Figure 3: Performance and Loading Modeling" style="width:60%; max-width:600px; display:block; margin:auto;">
 
 
-We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis. Our theoretical predictions had the same general velocity dependence, but overestimated the power produced by approximately three-fold. It also significantly underestimated the free-spin rate. We attribute the power overestimation partially to not considering friction, and general prediction differences largely to setting a single value for the linear induction factor.
+We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis (Figure 4). Our theoretical predictions had the same general velocity dependence, but overestimated the power produced by approximately three-fold. It also significantly underestimated the free-spin rate. We attribute the power overestimation partially to not considering friction, and general prediction differences largely to setting a single value for the linear induction factor.
 
-<img src = "{{'/assets/images/ExperimentalVSTheoretical.png' | relative_url}}" alt = "Figure 4: Theoretical vs Experimental Power Curves" style='width:60;max-width:600px; display:block; margin:auto;">
+<img src="{{ '/assets/images/ExperimentalVSTheoretical.png' | relative_url }}"
+     alt="Figure 4: Theoretical vs Experimental Power Curves"
+     style="width:60px; max-width:600px; display:block; margin:auto;"
 
 
-I contributed to the operating condition determination, worked extensively on the blade simulation and validation in Matlab, and helped operate the wind tunnel during the testing phase. 
+My contributions: I contributed to the operating condition determination, worked extensively on the blade simulation and validation in Matlab, and helped operate the wind tunnel during the testing phase. 
 
 
