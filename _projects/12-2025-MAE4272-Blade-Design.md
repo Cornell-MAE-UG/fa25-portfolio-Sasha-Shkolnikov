@@ -22,23 +22,11 @@ Our group had to determine the operating condtion at which to optimize the blade
 <img src="{{ '/assets/images/blade-simulation.png' | relative_url }}" alt="Figure 3: Performance and Loading Modeling" style="width:60%; max-width:600px; display:block; margin:auto;">
 
 
-We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis. 
+We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis. Our theoretical predictions had the same general velocity dependence, but overestimated the power produced by approximately three-fold. It also significantly underestimated the free-spin rate. We attribute the power overestimation partially to not considering friction, and general prediction differences largely to setting a single value for the linear induction factor.
 
+<img src = "{{'/assets/images/ExperimentalVSTheoretical.png' | relative_url}}" alt = "Figure 4: Theoretical vs Experimental Power Curves" style='width:60;max-width:600px; display:block; margin:auto;">
 
-Testing summary: How the blades were tested and what data you analyzed
 
 I contributed to the operating condition determination, worked extensively on the blade simulation and validation in Matlab, and helped operate the wind tunnel during the testing phase. 
-
-Figures: Plots, CAD image, and photos 
-
-
-This is how I solved the problem:
-
-```python
-    some code = 10;
-    plot();
-```
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
 
 
