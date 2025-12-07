@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Sasha Shkolnikov
 description              : Sasha Shkolnikov - Projects and CV 
-baseurl                  : fa25-portfolio-Sasha-Shkolnikov # Set this to your repo name 
+baseurl                  : /fa25-portfolio-Sasha-Shkolnikov/ # Set this to your repo name 
 
 # Theme and Style
 theme: jekyll-theme-minimal
