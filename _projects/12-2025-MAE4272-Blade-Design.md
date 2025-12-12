@@ -35,11 +35,22 @@ image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
 </figure>
 
 <figure style="text-align:center;">
+  <img src="{{ '/assets/images/blade-cad.png' | relative_url }}" 
+       alt="Figure 3: Physical Blade"
+       style="width:125%; max-width:600px; display:block; margin:auto;">
+  <figcaption style="font-size:0.9em; color:#555;">
+    Figure 3: Physical Blade
+  </figcaption>
+</figure>
+
+
+
+<figure style="text-align:center;">
   <img src="{{ '/assets/images/blade-simulation.png' | relative_url }}" 
        alt="Figure 3: Blade Performance Simulation"
        style="width:125%; max-width:600px; display:block; margin:auto;">
   <figcaption style="font-size:0.9em; color:#555;">
-    Figure 3: Theoretical Power and Loading Predictions
+    Figure 4: Theoretical Power and Loading Predictions
   </figcaption>
 </figure>
 
