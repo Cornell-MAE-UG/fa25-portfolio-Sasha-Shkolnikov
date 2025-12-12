@@ -54,7 +54,7 @@ image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
   </figcaption>
 </figure>
 
-**Testing Process:** We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis (Figure 4). Our theoretical predictions had the same general velocity-cubed dependence, but overestimated the power produced by approximately three-fold. It also significantly underestimated the free-spin rate. We attribute the power overestimation partially to the lack of friction in our model, and the discrepency more generally to setting a single value for the linear induction factor.
+**Testing Process:** We tested our blade at a variety of wind speed and rotation rate combinations, by varying the torque break's input voltage as well as the wind tunnel fan frequency, to generate several power curves for analysis (Figure 4). Each voltage corresponded to a different equilibrium rotation rate, and each fan frequency corresponded to a different air-speed. Our theoretical predictions had the same general velocity-cubed dependence, but overestimated the power produced by approximately three-fold. It also significantly underestimated the free-spin rate. We attribute the power overestimation partially to the lack of friction in our model, and the discrepency more generally to setting a single value for the linear induction factor.
 
 <figure style="text-align:center;">
   <img src="{{ '/assets/images/ExperimentalVSTheoretical.png' | relative_url }}"
