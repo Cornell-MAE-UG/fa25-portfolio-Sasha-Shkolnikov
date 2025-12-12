@@ -35,7 +35,7 @@ image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
 </figure>
 
 <figure style="text-align:center;">
-  <img src="{{ '/assets/images/blade-cad.png' | relative_url }}" 
+  <img src="{{ '/assets/images/physical-blade.png' | relative_url }}" 
        alt="Figure 3: Physical Blade"
        style="width:125%; max-width:600px; display:block; margin:auto;">
   <figcaption style="font-size:0.9em; color:#555;">
