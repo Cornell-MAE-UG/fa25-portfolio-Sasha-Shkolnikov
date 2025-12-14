@@ -13,8 +13,22 @@ permalink: /projects/
 
   .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2.5rem; /* space between rows AND columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; /* vertical + horizontal spacing */
+  }
+
+  /* Tablet */
+  @media (max-width: 900px) {
+    .project-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 550px) {
+    .project-gallery {
+      grid-template-columns: 1fr;
+    }
   }
 
   .gallery-item {
@@ -36,6 +50,7 @@ permalink: /projects/
   .gallery-item a {
     text-decoration: none;
     color: inherit;
+    display: block;
   }
 </style>
 
@@ -44,8 +59,8 @@ permalink: /projects/
     {% for project in site.projects %}
       <div class="gallery-item">
         <a href="{{ project.url | relative_url }}">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-          <p>{{ project.title }}</p>
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title | default: 'Project image' }}">
+          <p>{{ project.title | default: project.slug }}</p>
         </a>
       </div>
     {% endfor %}

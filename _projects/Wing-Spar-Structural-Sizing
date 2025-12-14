@@ -1,11 +1,11 @@
 ---
 layout: project
-title: "Structural Wing-Spar Sizing "
+title: "Structural Wing-Spar Sizing"
 description: "Wing-Spar Stress Analysis"
 technologies:
   - ANSYS
   - Matlab
   - Solidworks CAD
-image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
+image: /assets/images/Wind-Turbine-Cover-Photo.png
 
 ---

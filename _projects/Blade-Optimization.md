@@ -5,6 +5,6 @@ description: "Constrained Blade Optimization"
 technologies:
   - MATLAB
   - ANSYS
-image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
+image: /assets/images/Wind-Turbine-Cover-Photo.png
 
 ---
