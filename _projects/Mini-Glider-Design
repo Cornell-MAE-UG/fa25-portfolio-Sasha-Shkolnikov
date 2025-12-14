@@ -1,0 +1,9 @@
+---
+layout: project
+title: "Mini Glider Design"
+description: "Glider Design Project"
+technologies:
+  - MATLAB
+image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
+
+---

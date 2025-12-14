@@ -1,6 +1,6 @@
 ---
 layout: project
-title: MAE 4300 Ethical Analysis
+title: 737 MAX Ethical Analysis
 description: "Ethical Analysis of the Boeing 737 Max Crashes"
 image: /assets/images/737MAX.png
 ---

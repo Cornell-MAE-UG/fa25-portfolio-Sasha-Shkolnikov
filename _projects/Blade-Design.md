@@ -1,10 +1,11 @@
 ---
 layout: project
-title: "MAE 4272 Blade Design Project"
+title: "Wind Turbine Blade Design Project"
 description: "Constrained Blade Optimization"
 technologies:
   - MATLAB
   - Wind Tunnel
+  - LabView
 image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
 
 ---

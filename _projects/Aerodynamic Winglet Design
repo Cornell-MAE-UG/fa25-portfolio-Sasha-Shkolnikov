@@ -1,0 +1,14 @@
+---
+layout: project
+title: "Aerodynamic Winglet Design"
+description: "Winglet Design and Optimization"
+technologies:
+  - MATLAB
+  - Vortex Lattice Method
+  - ANSYS
+  - Solidworks CAD
+  - 3D Printing
+  - CNC Machining
+image: /assets/images/Wind-Turbine-Cover-Photo.jpeg
+
+---

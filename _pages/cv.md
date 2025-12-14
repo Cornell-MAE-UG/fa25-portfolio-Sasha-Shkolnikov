@@ -13,7 +13,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring aerospace engineering student with a strong foundation in aerodynamic theory, statics, and analysis. Passionate about aviation and eager to apply my knowledge in real-world applications.
+Aspiring aerospace engineering student with a strong foundation in aerodynamic theory and mechanical engineering analysis. Passionate about aviation and eager to apply my knowledge in real-world applications.
 
 ---
 
@@ -42,11 +42,6 @@ Aspiring aerospace engineering student with a strong foundation in aerodynamic t
   - optimized the design of a wind turbine blade   
   - predicted its performance and structural loading using BEM scripts, and validated the design with wind tunnel testing
 
-- **737 Max Ethical Analysis**:  
-  *[Capstone Ethics Project for MAE 4300]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
-
 ---
 
 #### Work Experience
@@ -58,7 +53,7 @@ Aspiring aerospace engineering student with a strong foundation in aerodynamic t
 - **US Government - Student Intern**  
   May, 2025 - August, 2025 
   - Employed cutting edge software tools, on-the-job learned tradecraft, critical thinking, and engineering expertise to draft technical snapshots on engineering capabilities  
-  - Provided timely and objective analysis to inform US officials on key policy issues through analytic insights in brainstorming sessions, briefings, and written products  
+  - Provided timely and objective analysis to inform US officials on key policy issues through analytic insights in brainstorming sessions, briefings, and written products
 
 ---
 
