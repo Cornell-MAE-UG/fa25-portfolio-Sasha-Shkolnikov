@@ -26,7 +26,7 @@ The work spanned aerodynamic theory, numerical optimization using a Vortex Latti
 ---
 
 <details open>
-<summary><strong>Optimization</strong></summary>
+<summary><strong>VLM Analysis and Optimization</strong></summary>
 
 <br>
 
@@ -51,13 +51,6 @@ A vertical raked winglet configuration was selected due to its structural simpli
   Range Score = L / (D · m)
 </p>
 
-
-</details>
-
----
-
-<details open>
-<summary><strong>VLM Analysis</strong></summary>
 
 <br>
 
@@ -118,14 +111,20 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
 
 <br>
 
-1. Simplified wing geometry  
-2. Computational enclosure: 5× chord upstream, 10× downstream and laterally  
-3. FMG grid initialization  
-4. Local curvature and edge mesh refinement  
-5. 1° incidence via freestream direction  
-6. Updated system mass from prototype: **0.175 kg**
+1. Simplified wing geometry  <br>
+2. Computational enclosure: 5× chord upstream, 10× downstream and laterally  <br>
+3. FMG grid initialization  <br>
+4. Local curvature and edge mesh refinement  <br>
+5. 1° incidence via freestream direction  <br>
+6. Updated system mass from prototype: 0.175 kg
 
-<table style="width:80%; border:1px solid #000; border-collapse:collapse; text-align:center;">
+<hr>
+
+<p style="text-align:center; font-weight:600; margin: 1rem 0;">
+  ANSYS Results
+</p>
+
+<table style="width:80%; border:1px solid #000; border-collapse:collapse; text-align:center; margin: 0 auto;">
   <tr>
     <th>Configuration</th>
     <th>Lift (N)</th>
@@ -149,54 +148,74 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
   </tr>
 </table>
 
-<p><strong>Percent improvement in range score: 2.7%</strong></p>
+<p style="text-align:center; font-size:0.9em; color:#555; margin-top:0.5rem;">
+  <strong>Percent improvement in range/range score: 2.7%</strong>
+</p>
+
+<hr>
+
 
 <figure style="text-align:center;">
   <img src="{{ '/assets/images/Winglet-ANSYS.png' | relative_url }}"
        alt="Winglet ANSYS Visual"
        style="width:100%; max-width:600px; display:block; margin:auto;">
   <figcaption style="font-size:0.9em; color:#555;">
-    ANSYS visualization showing weakened wingtip vortices
+    ANSYS visualization showing wingtips disturbing vortices
   </figcaption>
 </figure>
 
 </details>
 
+
 ---
 
-<details open>
+<details>
 <summary><strong>Manufacturing and Integration</strong></summary>
 
 <br>
 
-Multiple prototypes were fabricated to refine tolerances and explore material options.
+Multiple prototypes were fabricated to refine tolerances and explore material options:
+<br>
 
-<figure style="text-align:center;">
+
+
+<figure style="text-align: center; margin: 2rem 0;">
   <img src="{{ '/assets/images/Winglet-Prototype-3D-Printed.png' | relative_url }}"
        alt="PLA Prototype"
-       style="width:100%; max-width:600px; display:block; margin:auto;">
-  <figcaption>Fully 3D Printed PLA Prototype</figcaption>
+       style="width:100%; max-width:600px; display:block; margin: 0 auto;">
+  <figcaption style="margin-top: 0.5rem;">
+    Fully 3D Printed PLA Prototype
+  </figcaption>
 </figure>
 
-<figure style="text-align:center;">
+
+This prototype was very sturdy, however it was too heavy to be integrated into the aircraft, which was already nearing the 55lbf FAA limit.
+<br>
+
+<figure style="text-align: center; margin: 2rem 0;">
   <img src="{{ '/assets/images/Winglet-Prototype-PLAAero.png' | relative_url }}"
        alt="PLA Aero Prototype"
        style="width:100%; max-width:600px; display:block; margin:auto;">
-  <figcaption>PLA Aero Aerodynamic Section</figcaption>
+  <figcaption>3D Printed PLA Aero Aerodynamic Section</figcaption>
 </figure>
 
-<figure style="text-align:center;">
+This prototype was much lighter, but the PLA Aero proved to be very brittle, and when attempting to sand it down to reduce the roughness, the layer lines would simply seperate.
+<br>
+
+<figure style="text-align: center; margin: 2rem 0;">
   <img src="{{ '/assets/images/Winglet-Hybrid-Prototype.png' | relative_url }}"
        alt="Hybrid Prototype"
        style="width:100%; max-width:600px; display:block; margin:auto;">
   <figcaption>Hybrid 3D Printed / Foam Prototype</figcaption>
 </figure>
 
+After flattening the bottom airfoil of the winglet to eliminate the negative geometry required by the 3-axis CNC machine, this configuration proved to be the ideal solution. The bottom airfoil was then refined with light sanding, which was significantly easier in foam than in PLA. The 3D-printed section added minimal weight while serving an important structural role, supporting both the antenna receivers and the live-feed camera, as well as tolerating the stress of scrweing the winglets into the wing.
+
 </details>
 
 ---
 
-<details open>
+<details>
 <summary><strong>Stress Calculations and Testing</strong></summary>
 
 <br>
@@ -212,10 +231,10 @@ Multiple prototypes were fabricated to refine tolerances and explore material op
 
   <tr>
     <td>Screw Shear (2× M4, minor diameter)</td>
-    <td>—</td>
-    <td>—</td>
-    <td>895 lbf shear capacity</td>
-    <td>✓ Large</td>
+    <td>P / 2A</td>
+    <td>0.36 MPa</td>
+    <td>414 MPa (steel, shear)</td>
+    <td>✓✓✓</td>
   </tr>
 
   <tr>
@@ -270,11 +289,15 @@ A conservative 10 lbf applied load, well above expected aerodynamic drag, shows 
   <figcaption>Applied shear load during qualification testing</figcaption>
 </figure>
 
+During test flights, it was observed that the winglet connectors would occasionally shear off the wing, particularly in cold weather when the epoxy became brittle. To address this issue, the screws were lengthened and extended into the wing rib, further constraining the sliding motion that could otherwise lead to shear failure.
+
+
 </details>
+
 
 ---
 
-<details open>
+<details>
 <summary><strong>Finished Product</strong></summary>
 
 <br>
@@ -290,7 +313,7 @@ A conservative 10 lbf applied load, well above expected aerodynamic drag, shows 
 
 ---
 
-<details open>
+<details>
 <summary><strong>Contributions</strong></summary>
 
 <br>
