@@ -119,7 +119,7 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
 4. FMG grid initialization  <br>
 5. Local curvature and edge mesh refinement  <br>
 6. 1° incidence via freestream direction  <br>
-7. Updated system mass from prototype: 175g
+7. Updated system mass from prototype: 175g <br>
 
 <figure style="text-align:center;">
   <img src="{{ '/assets/images/Winglet-Enclosure-Diagram.svg' | relative_url }}"
