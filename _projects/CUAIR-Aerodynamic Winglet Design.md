@@ -121,6 +121,15 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
 6. 1° incidence via freestream direction  <br>
 7. Updated system mass from prototype: 175g
 
+<figure style="text-align:center;">
+  <img src="{{ '/assets/images/Winglet-Enclosure-Diagram.svg' | relative_url }}"
+       alt="Computational enclosure boundary conditions"
+       style="width:100%; max-width:600px; display:block; margin:auto;">
+  <figcaption style="font-size:0.9em; color:#555;">
+    Computational enclosure and boundary conditions (schematic, not to scale)
+  </figcaption>
+</figure>
+
 <hr>
 
 <p style="text-align:center; margin: 1rem 0 0.5rem 0;">
