@@ -102,7 +102,7 @@ Winglet mass was explicitly included in the optimization. Winglet volume was com
 
 <br>
 
-VLM solvers do not consider viscous drag; therefore results were treated qualitatively and refined using ANSYS Fluent.
+VLM solvers do not consider viscous drag; therefore results were treated qualitatively and refined using ANSYS Fluent. In effect, the VLM stage optimized for lift alone, since lift is cheap to model accurately, while ANSYS was better suited to capturing drag realistically. The engineering judgment was to optimize geometry for lift first, then use the refined ANSYS drag estimate to see how much of that gain actually survived.
 
 </details>
 
@@ -181,6 +181,10 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
     ANSYS visualization showing wingtips disturbing vortices
   </figcaption>
 </figure>
+
+<p style="font-size:0.9em; color:#555;">
+  <strong>What I would do differently:</strong> The wing and winglet walls were left at ANSYS's default surface roughness rather than being set to match the actual 3D-printed/foam finish. Using a roughness value representative of the manufactured surface would give a more accurate drag estimate instead of the smooth-wall assumption used here.
+</p>
 
 </details>
 
