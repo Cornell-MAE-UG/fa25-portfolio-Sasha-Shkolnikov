@@ -115,10 +115,11 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
 
 1. Simplified wing geometry  <br>
 2. Computational enclosure: 5× chord upstream, 10× downstream and laterally  <br>
-3. FMG grid initialization  <br>
-4. Local curvature and edge mesh refinement  <br>
-5. 1° incidence via freestream direction  <br>
-6. Updated system mass from prototype: 175g
+3. Velocity inlet and pressure outlet boundary conditions, as well as free-stream far-field conditions <br>
+4. FMG grid initialization  <br>
+5. Local curvature and edge mesh refinement  <br>
+6. 1° incidence via freestream direction  <br>
+7. Updated system mass from prototype: 175g
 
 <hr>
 
