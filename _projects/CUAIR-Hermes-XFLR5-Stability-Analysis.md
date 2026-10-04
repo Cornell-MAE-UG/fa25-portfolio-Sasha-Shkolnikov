@@ -62,40 +62,75 @@ Key aircraft parameters from XFLR5:
 
 <br>
 
-XFLR5's VLM solver has no way to import or mesh complex fuselage CAD — it only handles lifting-surface geometry (wing, tail) cleanly. Rather than approximating the fuselage with a crude lifting-body shape, I instead modeled it as a non-lifting drag object defined by a drag coefficient and reference area, with the Cd pulled from a separate ANSYS Fluent CFD study I had already run on the actual fuselage geometry.
+XFLR5's VLM solver has no way to import or mesh complex fuselage CAD, since it only handles lifting-surface geometry like the wing and tail cleanly. Rather than approximating the fuselage with a crude lifting-body shape, I instead modeled it as a non-lifting drag object defined by a drag coefficient and reference area, with the Cd pulled from a separate ANSYS Fluent CFD study I had already run on the actual fuselage geometry.
 
-The CFD study resolved the fuselage wake in detail — velocity recombination 0.05 m, 0.2 m, and 0.35 m aft of the body, the low-pressure separation region driving pressure drag, and the surrounding vorticity disturbing the flow. This informed sizing of the body-of-influence mesh refinement region (extending roughly 1.5 body-lengths downstream and 0.5 upstream to fully capture the wake) before extracting a converged drag coefficient.
+The CFD study resolved the fuselage wake in detail, looking at velocity recombination at 0.05 m, 0.2 m, and 0.35 m aft of the body, the low-pressure separation region driving pressure drag, and the surrounding vorticity disturbing the flow. This informed sizing of the body-of-influence mesh refinement region, extending roughly 1.5 body-lengths downstream and 0.5 upstream to fully capture the wake, before extracting a converged drag coefficient.
 
 <figure style="text-align:center;">
   <img src="{{ '/assets/images/ANSYS-Fuselage-Wake-Vectors.png' | relative_url }}"
        alt="ANSYS velocity vector field showing fuselage wake"
        style="width:100%; max-width:700px; display:block; margin:auto;">
   <figcaption style="font-size:0.9em; color:#555;">
-    Velocity vector field around the fuselage — the extended low-velocity wake region shows the BOI needed to be at least ~1.5 body-lengths downstream and ~0.5 upstream to fully capture it
+    Velocity vector field around the fuselage. The extended low-velocity wake region shows the BOI needed to be at least ~1.5 body-lengths downstream and ~0.5 upstream to fully capture it
   </figcaption>
 </figure>
 
-A mesh convergence study was run across several minimum surface/volume sizing, curvature resolution, boundary layer, and body-of-influence settings to confirm the result wasn't mesh-dependent:
+A mesh convergence study was run across several minimum surface and volume sizing, curvature resolution, boundary layer, and body-of-influence settings to confirm the result wasn't mesh-dependent:
 
 <table style="width:95%; border:1px solid #000; border-collapse:collapse; text-align:center;">
   <tr>
-    <th>Min. Surface</th>
-    <th>Min. Volume</th>
-    <th>Curvature</th>
-    <th>Boundary Layers</th>
-    <th>Body of Influence</th>
-    <th>Cd</th>
+    <th style="border:1px solid #000; padding:4px;">Min. Surface</th>
+    <th style="border:1px solid #000; padding:4px;">Min. Volume</th>
+    <th style="border:1px solid #000; padding:4px;">Curvature</th>
+    <th style="border:1px solid #000; padding:4px;">Boundary Layers</th>
+    <th style="border:1px solid #000; padding:4px;">Body of Influence</th>
+    <th style="border:1px solid #000; padding:4px;">Cd</th>
   </tr>
-  <tr><td>0.000576</td><td>0.000576</td><td>5</td><td>10</td><td>0.01</td><td>0.247</td></tr>
-  <tr><td>0.001</td><td>0.001</td><td>2</td><td>10</td><td>0.02</td><td>0.257</td></tr>
-  <tr><td>0.008</td><td>0.008</td><td>0</td><td>10</td><td>0.02</td><td>0.266</td></tr>
-  <tr><td>0.001</td><td>0.001</td><td>5</td><td>15</td><td>0.02</td><td>0.263</td></tr>
-  <tr><td>0.001</td><td>0.001</td><td>5</td><td>20</td><td>0.02</td><td>0.259</td></tr>
+  <tr>
+    <td style="border:1px solid #000; padding:4px;">0.000576</td>
+    <td style="border:1px solid #000; padding:4px;">0.000576</td>
+    <td style="border:1px solid #000; padding:4px;">5</td>
+    <td style="border:1px solid #000; padding:4px;">10</td>
+    <td style="border:1px solid #000; padding:4px;">0.01</td>
+    <td style="border:1px solid #000; padding:4px;">0.247</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">2</td>
+    <td style="border:1px solid #000; padding:4px;">10</td>
+    <td style="border:1px solid #000; padding:4px;">0.02</td>
+    <td style="border:1px solid #000; padding:4px;">0.257</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #000; padding:4px;">0.008</td>
+    <td style="border:1px solid #000; padding:4px;">0.008</td>
+    <td style="border:1px solid #000; padding:4px;">0</td>
+    <td style="border:1px solid #000; padding:4px;">10</td>
+    <td style="border:1px solid #000; padding:4px;">0.02</td>
+    <td style="border:1px solid #000; padding:4px;">0.266</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">5</td>
+    <td style="border:1px solid #000; padding:4px;">15</td>
+    <td style="border:1px solid #000; padding:4px;">0.02</td>
+    <td style="border:1px solid #000; padding:4px;">0.263</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">0.001</td>
+    <td style="border:1px solid #000; padding:4px;">5</td>
+    <td style="border:1px solid #000; padding:4px;">20</td>
+    <td style="border:1px solid #000; padding:4px;">0.02</td>
+    <td style="border:1px solid #000; padding:4px;">0.259</td>
+  </tr>
 </table>
 
 <br>
 
-This converged to Cd = 0.258 ± 0.011. Combined with the fuselage's frontal/reference area, this Cd was entered directly into XFLR5's fuselage drag object definition, giving the stability model a fuselage drag contribution grounded in actual resolved CFD flow physics rather than a simplified VLM approximation of the fuselage shape — while keeping the fuselage non-lifting and out of the VLM mesh entirely, consistent with XFLR5's intended use.
+This converged to Cd = 0.258 ± 0.011. Combined with the fuselage's frontal reference area, this Cd was entered directly into XFLR5's fuselage drag object definition, giving the stability model a fuselage drag contribution grounded in actual resolved CFD flow physics rather than a simplified VLM approximation of the fuselage shape, while keeping the fuselage non-lifting and out of the VLM mesh entirely, consistent with XFLR5's intended use.
 
 </details>
 
