@@ -62,20 +62,20 @@ Key aircraft parameters from XFLR5:
 
 <br>
 
-XFLR5's VLM solver can't import or mesh complex fuselage CAD, since it only handles lifting-surface geometry like the wing and tail. Instead of approximating the fuselage with a crude lifting-body shape, I modeled it as a non-lifting drag object defined by a drag coefficient and reference area, with the Cd pulled from a separate ANSYS Fluent CFD study on the actual fuselage geometry.
+XFLR5's VLM solver can't take in or mesh complex fuselage CAD, it really only handles lifting surfaces like the wing and tail. So instead of approximating the fuselage as some crude lifting body, I treated it as a non-lifting drag object defined by a Cd and reference area, pulling that Cd from a CFD study I had already run on the actual fuselage in ANSYS Fluent.
 
-That CFD study resolved the wake in detail (velocity recombination at 0.05, 0.2, and 0.35 m aft of the body, the low-pressure separation region, and surrounding vorticity), which informed sizing the body-of-influence refinement region to roughly 1.5 body-lengths downstream and 0.5 upstream before extracting Cd.
+That study resolved the wake behind the fuselage in some detail, velocity recombining at 0.05, 0.2, and 0.35 m aft of the body, the low-pressure separation region, and the vorticity spinning off around it. That's what informed how I sized the body-of-influence refinement region, about 1.5 body-lengths downstream and 0.5 upstream, before pulling a Cd out of it.
 
 <figure style="text-align:center;">
   <img src="{{ '/assets/images/ANSYS-Fuselage-Wake-Vectors.png' | relative_url }}"
        alt="ANSYS velocity vector field showing fuselage wake"
        style="width:100%; max-width:700px; display:block; margin:auto;">
   <figcaption style="font-size:0.9em; color:#555;">
-    Velocity vector field around the fuselage. The extended low-velocity wake region shows the BOI needed to be at least ~1.5 body-lengths downstream and ~0.5 upstream to fully capture it
+    Velocity vector field around the fuselage, the extended low-velocity wake shows why the BOI needed to reach at least ~1.5 body-lengths downstream and ~0.5 upstream to fully capture it
   </figcaption>
 </figure>
 
-A mesh sensitivity check across several combinations of surface and volume sizing, curvature resolution, boundary layers, and BOI radius showed how much Cd moved under different reasonable meshing choices:
+To make sure the Cd wasn't just an artifact of one meshing choice, I ran a sensitivity check across a few combinations of surface and volume sizing, curvature resolution, boundary layers, and BOI radius:
 
 <table style="width:95%; border:1px solid #000; border-collapse:collapse; text-align:center;">
   <tr>
@@ -130,9 +130,9 @@ A mesh sensitivity check across several combinations of surface and volume sizin
 
 <br>
 
-Cd averaged 0.258 across the five runs, with a spread of about ± 0.011. Since most runs changed several meshing parameters at once rather than refining one variable systematically, this isn't a formal grid convergence result; the ± 0.011 is just the scatter across reasonable meshing choices. The one clean isolated comparison, boundary layers at 15 versus 20 with everything else fixed, still shifted Cd by 0.004, suggesting the result was close but not fully converged in the formal sense. I treated 0.258 ± 0.011 as a reasonable working estimate given time constraints rather than a rigorous bound.
+Cd averaged 0.258 across the five runs, with a spread of about ±0.011. Worth noting this isn't a real grid convergence study, since most runs changed several meshing parameters at once instead of refining one variable at a time, so that ±0.011 is really just scatter across different reasonable meshing choices, not a formal bound. The one case where I did isolate a single variable, boundary layers at 15 versus 20 with everything else held fixed, still shifted Cd by 0.004, so the result was close to settled but probably hadn't fully converged. Given time constraints, I treated 0.258 ± 0.011 as a reasonable working estimate rather than something rigorous.
 
-This Cd, combined with the fuselage's frontal reference area, was entered directly into XFLR5's fuselage drag object, giving the stability model a drag contribution grounded in resolved CFD physics rather than a VLM approximation of the fuselage shape, while keeping the fuselage non-lifting and out of the VLM mesh, consistent with XFLR5's intended use.
+That Cd, combined with the fuselage's frontal area, got entered directly into XFLR5's fuselage drag object. This gave the stability model a drag contribution grounded in actual resolved CFD physics instead of a crude VLM approximation of the fuselage, while still keeping the fuselage non-lifting and out of the VLM mesh, which is consistent with how XFLR5 is meant to be used.
 
 </details>
 
