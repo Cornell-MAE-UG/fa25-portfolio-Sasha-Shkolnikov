@@ -75,7 +75,7 @@ The CFD study resolved the fuselage wake in detail, looking at velocity recombin
   </figcaption>
 </figure>
 
-A mesh convergence study was run across several minimum surface and volume sizing, curvature resolution, boundary layer, and body-of-influence settings to confirm the result wasn't mesh-dependent:
+A mesh sensitivity check was run across several combinations of minimum surface and volume sizing, curvature resolution, boundary layer count, and body-of-influence radius, to see how much Cd moved around under different reasonable meshing choices:
 
 <table style="width:95%; border:1px solid #000; border-collapse:collapse; text-align:center;">
   <tr>
@@ -130,7 +130,9 @@ A mesh convergence study was run across several minimum surface and volume sizin
 
 <br>
 
-This converged to Cd = 0.258 ± 0.011. Combined with the fuselage's frontal reference area, this Cd was entered directly into XFLR5's fuselage drag object definition, giving the stability model a fuselage drag contribution grounded in actual resolved CFD flow physics rather than a simplified VLM approximation of the fuselage shape, while keeping the fuselage non-lifting and out of the VLM mesh entirely, consistent with XFLR5's intended use.
+Across the five runs, Cd averaged 0.258 with a spread of about ± 0.011 from the mean. This is not a formal grid convergence result, since most runs change several meshing parameters at once rather than refining one variable systematically, so the ± 0.011 should be read as the scatter in Cd across different reasonable meshing choices rather than a discretization-error bound in the Richardson extrapolation or GCI sense. The one clean isolated comparison, boundary layer count at 15 versus 20 with everything else held fixed, still showed Cd shifting by 0.004, suggesting the result was close to settled but likely hadn't fully converged in the formal sense. A proper convergence study would refine a single mesh density metric across at least three systematically refined meshes and report the GCI; I treated the 0.258 ± 0.011 band here as a reasonable working estimate given time constraints, not a rigorous uncertainty bound.
+
+Combined with the fuselage's frontal reference area, Cd = 0.258 was entered directly into XFLR5's fuselage drag object definition, giving the stability model a fuselage drag contribution grounded in actual resolved CFD flow physics rather than a simplified VLM approximation of the fuselage shape, while keeping the fuselage non-lifting and out of the VLM mesh entirely, consistent with XFLR5's intended use.
 
 </details>
 
