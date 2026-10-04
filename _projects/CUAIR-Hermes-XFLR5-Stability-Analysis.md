@@ -130,7 +130,7 @@ A mesh sensitivity check across several combinations of surface and volume sizin
 
 <br>
 
-Cd averaged 0.258 across the five runs, with a spread of about ± 0.011. Since most runs changed several meshing parameters at once rather than refining one variable systematically, this isn't a formal grid convergence result; the ± 0.011 is the scatter across reasonable meshing choices, not a Richardson/GCI discretization-error bound. The one clean isolated comparison, boundary layers at 15 versus 20 with everything else fixed, still shifted Cd by 0.004, suggesting the result was close but not fully converged in the formal sense. I treated 0.258 ± 0.011 as a reasonable working estimate given time constraints rather than a rigorous bound.
+Cd averaged 0.258 across the five runs, with a spread of about ± 0.011. Since most runs changed several meshing parameters at once rather than refining one variable systematically, this isn't a formal grid convergence result; the ± 0.011 is just the scatter across reasonable meshing choices. The one clean isolated comparison, boundary layers at 15 versus 20 with everything else fixed, still shifted Cd by 0.004, suggesting the result was close but not fully converged in the formal sense. I treated 0.258 ± 0.011 as a reasonable working estimate given time constraints rather than a rigorous bound.
 
 This Cd, combined with the fuselage's frontal reference area, was entered directly into XFLR5's fuselage drag object, giving the stability model a drag contribution grounded in resolved CFD physics rather than a VLM approximation of the fuselage shape, while keeping the fuselage non-lifting and out of the VLM mesh, consistent with XFLR5's intended use.
 
