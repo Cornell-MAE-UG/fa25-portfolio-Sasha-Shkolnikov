@@ -171,7 +171,7 @@ VLM solvers do not consider viscous drag; therefore results were treated qualita
 </p>
 
 <p style="font-size:0.9em; color:#555; max-width:650px; margin:0.5rem auto 0 auto;">
-  This is modeled on just the wing rather than the full aircraft, which I'd argue makes it a conservative estimate. The wing accounts for most of the aircraft's lift but only a fraction of its total drag, so the percent change in lift above is fairly representative of the full aircraft, while the percent change in drag is overstated relative to what the full aircraft would see. Since the range score scales with L/D, an overstated drag increase pulls the score down more than it would on the real aircraft, so 2.7% should be read as a conservative floor on the actual range improvement.
+  This is modeled on just the wing rather than the full aircraft, which I'd argue makes it a conservative estimate. The wing accounts for most of the aircraft's lift but only a fraction of its total drag, so the percent change in lift above is fairly representative of the full aircraft, while the percent change in drag is overstated relative to what the full aircraft would see. Since the range score scales with L/D, an overstated drag increase pulls the score down more than it would on the real aircraft, so 2.7% should be read as a conservative estimate of the actual range improvement.
 </p>
 
 <hr>

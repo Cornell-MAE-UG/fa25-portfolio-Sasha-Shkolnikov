@@ -162,7 +162,7 @@ With the CG positioned at x = 0.132 m behind the wing leading edge, XFLR5 predic
   <tr><td>Cruise Speed</td><td>20.4 m/s</td></tr>
   <tr><td>Angle of Attack (fuselage ref.)</td><td>2.5°</td></tr>
   <tr><td>Lift Coefficient (CL)</td><td>0.768</td></tr>
-  <tr><td>CL/CD</td><td>~21</td></tr>
+  <tr><td>CL/CD</td><td>~24</td></tr>
 </table>
 
 <br>
